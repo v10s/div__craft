@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<title>DIVCRAFT</title>
+		<!-- Bootstrap -->
+		<style type="text/css"></style>
+
+
+
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+		{%load static%}
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+		{%load static%}
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     	 rel="stylesheet">
+
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous&display=swap');	
+		</style>
+		{% block head %}
+
+		{% endblock %}
+
+
+
+
+
+	</head>
+	<body style="height: 100%">
+
+		<a style="padding: 10px;" class="float-right btn" href="{% url 'user:logout' %}">LOGOUT </a>
+
+
+
+
+		<div class="" style="height: 100%">
+			<div class="row" style="height: 100%" >
+				<div class="col-sm-4 bg-dark" style="height: 100%;">
+					{% block request %}
+
+					{% endblock %}
+				</div>
+				<div class="col-sm-8" style="height: 100%;">
+					{% block choice%}
+
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

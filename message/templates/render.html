@@ -1,0 +1,36 @@
+{% extends 'feedBase.html' %}
+
+
+				{% block main %}
+				<h1>Messages</h1>
+					{% for message in messages%}
+						{{message.user1}}
+						{{message.user2}}
+					{% endfor%}
+				{% endblock %}	
+
+
+				{% block bList %}
+				<h1>BLocked</h1>
+					{% for block in blocks %}
+						{{block.username}}
+						{{block.bio}}
+						{{block.message}}
+						<br>
+						$$$$
+					{% endfor %}
+
+
+				{% endblock %}
+
+				{% block choose %}
+					<h1> Choose</h1>
+					{% for user in users %}
+						{{user.username}}
+						{{user.bio}}
+						{{user.message}}
+						$$$$
+						<br>
+					{% endfor %}
+
+				{% endblock %}

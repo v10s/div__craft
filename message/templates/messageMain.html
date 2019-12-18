@@ -1,0 +1,52 @@
+{% extends 'messageBase.html' %}
+
+	{% block request %}
+	<br>
+	<a href="{% url 'message:home' %}"><i class="material-icons">arrow_back_ios</i></a>
+	<br>
+	<br>
+		{% for message in messages %}
+			<div class="card">
+				<div class="card-header">
+					
+				</div>
+
+				<div class="card-footer">
+					{% if user_main.username == message.user1 %}
+						{{message.user2}}
+					{% else %}
+						{{message.user1}}
+					{% endif %}
+					<br>
+					<a href="{% url 'message:detail' message.messageid %}">Chat</a>
+				</div>
+			</div>
+			<br>
+			<br>
+
+		{% endfor %}
+
+	{% endblock %}
+
+	{% block choice%}
+	<br>                                                        
+	<br>
+		{% for user in users %}
+			<div class="card">
+				<div class="card-header">
+					{{user.usernameid}}
+				</div>
+					
+				<div class="card-body">
+					{{user.bio}}
+					{{user.messsage}}
+				</div>
+				
+				<div class="card-footer">
+					<a href="{% url 'message:create' user.usernameid %}">Connect</a>
+				</div>
+			</div>
+			<br>
+		{% endfor %}
+
+	{% endblock %}

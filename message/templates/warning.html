@@ -1,0 +1,7 @@
+{% extends 'warning_base.html' %}
+	{% block main%}
+		<h2>{{messageheader}}</h2>
+		<br>
+		<p>{{message}}</p>
+		<a class="float-right btn btn-secondary" href="{% url 'message:animation' %}">RETRY</a>
+	{% endblock %}

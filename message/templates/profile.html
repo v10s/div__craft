@@ -1,0 +1,41 @@
+{% extends 'messageBase.html' %}
+
+
+
+{% block request %}
+	<br>
+	<a href="{% url 'message:home' %}"><i class="material-icons">arrow_back_ios</i></a>
+	<br>
+	<br>
+	<div class="card">
+		<div class="card-header">
+			<h4 class="text-head text-dark">{{user.username}}</h4>
+		</div>
+		<div class="card-body">
+			<p class="text-para text-secondary">BIO:<br>{{user.bio}}</p>
+			<p class="text-para text-secondary">MESSAGE:<br>{{user.message}}</p>
+		</div>
+		<div class="card-footer">
+			<p class="text-para text-info">{{user.emailId}}</p>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block choice %}
+	<div style="margin-top: 200px;">
+		<div class="card">
+			<div class="card-body">
+				<form action="{% url 'message:profile' %}" method="POST">
+					{%csrf_token%}
+					{{form}}
+					<br>
+					<button type="submit" class="float-right btn btn-primary">SUBMIT</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+{% endblock %}

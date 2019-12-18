@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>DIVCRAFT</title>
+		<!-- Bootstrap -->
+		<style type="text/css"></style>
+
+
+
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+		{%load static%}
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+		{%load static%}
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     	 rel="stylesheet">
+
+     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		
+
+
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous&display=swap');	
+		</style>
+		<style>@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+</style>
+</style>
+
+</head>
+<body class="bg-dark">
+		<div class="bg-dark">
+			<center>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 style="font-family: 'Source Code Pro', monospace;" id="logo" class="logo-animate logo logo-page"></h1>
+				<p style="font-family: 'Source Code Pro'," id="subline" class="subline">presents
+				</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</center>
+		</div>
+	<script type="text/javascript">
+		
+		var i = 0;
+		var str = "<div>__craft";
+		var st = "";
+		var time = setInterval(type, 250);
+
+
+
+		function type(){
+			if(str[i] ==undefined){
+				clearTimeout(time);
+				window.open("{% url 'message:home' %}","_self");
+				return (0);
+			}
+			else if(str[i] == '<'){
+				st += "&lt";
+			}
+			else if(str[i] == '>'){
+				st += "&gt";
+			}
+			else{
+				st += str[i];
+
+			}
+			console.log(st);
+			document.getElementById('logo').innerHTML = st;
+			i+=1;
+		}
+
+		function animateCSS(element, animationName, callback) {
+		    const node = document.querySelector(element)
+		    node.classList.add('animated', animationName)
+
+		    function handleAnimationEnd() {
+		        node.classList.remove('animated', animationName)
+		        node.removeEventListener('animationend', handleAnimationEnd)
+
+		        if (typeof callback === 'function') callback()
+		    }
+
+		    node.addEventListener('animationend', handleAnimationEnd)
+		}
+
+	</script>
+
+
+
+
+</body>
+</html>

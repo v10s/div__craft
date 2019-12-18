@@ -1,0 +1,46 @@
+				<head>
+		<title>DIVCRAFT</title>
+		<!-- Bootstrap -->
+		<style type="text/css"></style>
+
+
+
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+		{%load static%}
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+		{%load static%}
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     	 rel="stylesheet">
+
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous&display=swap');	
+		</style>
+		{% block head %}
+
+		{% endblock %}
+
+
+		<meta http-equiv="refresh" content="5" />
+
+
+
+	</head>
+
+
+
+
+
+			<div id="chatblock"  style="overflow:scroll; height:500px;">
+
+
+				{{messagedetail.messageBlock | safe }}
+
+
+				<script type="text/javascript">
+					document.getElementById('chatblock').scrollTo(0,	document.getElementById('chatblock').scrollHeight);
+				</script>
+			</div

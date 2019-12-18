@@ -1,0 +1,16 @@
+{% extends 'feedBase.html' %}
+
+	{% block main%}
+		<div class="col-sm-6">
+			<form action="{% url 'message:create' %}" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form}}
+				<div>
+					<input class="float-right btn btn-success" type="submit" name="" value="SUBMIT">
+				</div>
+				
+			</form>
+		</div>
+		
+
+	{% endblock %}

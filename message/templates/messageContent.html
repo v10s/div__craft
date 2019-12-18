@@ -1,0 +1,77 @@
+{% extends 'messageBase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+
+
+	{% block request %}
+	<br>
+	<a href="{% url 'message:message' %}"><i class="material-icons">arrow_back_ios</i></a>
+	<br>
+	<br>
+		{% for message in messages %}
+			<div class="card">
+				<div class="card-header">
+					
+				</div>
+
+				<div class="card-footer">
+					{% if user_main.username == message.user1 %}
+						{{message.user2}}
+					{% else %}
+						{{message.user1}}
+					{% endif %}
+					<br>
+					<a href="{% url 'message:detail' message.messageid %}">Chat</a>
+				</div>
+			</div>
+			<br>
+			<br>
+
+		{% endfor %}
+
+	{% endblock %}
+
+	{% block choice%}
+	<br>
+	<br>
+		<div class="card">
+			<div class="card-header">
+				{{messagedetail.user1}}
+				{{messagedetail.user2}}
+			</div>
+				
+
+			<iframe id="iframe1" height="505px" class="card-body card" style="overflow:hidden; margin: 0px; padding: 0px;" src="{% url 'message:messageBlock' messageid %}" >
+				
+
+
+			</iframe>
+
+
+
+
+			
+
+
+			<div class="card-footer">
+				<form action="{% url 'message:chat' messagedetail.messageid %}" method="POST">
+					{% csrf_token %}
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-8">
+								<input class="form-control" type="text" name="chat" style="display: inline;" required autofocus>
+							</div>
+							<div class="col-sm-4">
+								<button type="submit" class="btn btn-primary bg-dark"> >>> </button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	{% endblock %}

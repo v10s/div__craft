@@ -1,0 +1,27 @@
+{% extends 'homeBase.html' %}
+	
+
+	{% block main%}
+
+		<!-- 2nd block -->
+		<div class="container-fluid">
+			
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-7 connect-info">
+						<h3 class="info">Somedays its the most logical thing in life.<br>Somedays its the biggest mistake I ever did.<br>
+						Finally it is here.</h1>
+						<p class="info"> Desiring to make it logical this time.<br>We present to you DIV__CRAFT <br>Just connect and find someone who is wishing for someone at the very moment</p>
+						<h5 class="info">May god bless!</h5>
+				</div>
+				<div class="col-sm-3">
+						<button type="" onclick="window.open({% url 'message:message' %},'_self')" class="float-right btn btn-primary connect bg-dark info">Connect</button>
+
+
+
+				</div>
+				<div class="col-sm-1"></div>
+
+			</div>
+		</div>
+	{% endblock%}
