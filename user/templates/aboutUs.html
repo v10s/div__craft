@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THE CRITIC'S PAGE</title>
+	<!-- BOOTSTRAP -->
+
+	{%load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+	{%load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	{%load static%}
+	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+	{%load static%}
+
+
+
+</head>
+<body style="background-image: url(/media/LOGO.jpg);background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover;" class="bg-dark">
+
+	<div class="container-fluid">
+		<div class="row">
+		
+			<div class="col-sm-2"></div><!-- Space -->
+
+
+			<div class="col-sm-8" style="margin-top: 15%">
+				<div class=" ">
+					<h1 class="text-head">ABOUT US:</h1>
+					<p class="text-para">
+						A try to make it better this time.
+					</p>
+					{% block main%}
+
+
+					{% endblock %}		
+				</div>
+
+			</div>
+
+			<div class="col-sm-2"></div><!-- Space -->
+		</div>
+	</div>
+
+	
+
+
+</body>
+</html>

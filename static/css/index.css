@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Pacifico|Roboto&display=swap');
+
+.logo{
+	font-family: Pacifico;
+}
+
+.btn-text{
+	font-family: Roboto;
+}
+.text-head{
+	font-family: Roboto;
+	font-weight: bold;
+}
+.text-para{
+	font-family: Baskerville;
+	font-weight: regular;
+}
+.text-label{
+	font-family: Baskerville;
+	font-style: italic;
+	color: lightblue;
+	font-size: 15px;
+}
+#id_title{
+	display: block;
+	margin-left: 100px;
+	border-radius: 20px;
+	border : solid 2px lightblue;
+	padding: 5px;
+}
+#id_image{
+	display: block;
+	margin-left: 100px;
+}
+#id_detail{
+	display: block;
+	margin-left: 100px;
+	border-radius: 20px;
+	border : solid 2px lightblue;
+	padding: 5px;
+}
+#id_feedId{
+	display: block;
+}
+#id_searchInput{
+	margin-left: 100px;
+	border-radius: 20px;
+	border : solid 2px lightblue;
+	padding: 5px;
+}
+#id_searchBtn{
+	background-color: white;
+	margin-left: 10px;
+	border-radius: 10px;
+	border : solid 2px lightblue;
+	padding: 5px;
+}
+.helptext{
+	display: none;
+}
+#id_username,#id_usernameid,#id_bio,#id_message,#id_DOB,#id_sex,#id_country,#id_emailId
+{
+	display: block;
+		margin-left: 10px;
+	border-radius: 10px;
+	border : solid 2px lightblue;
+	padding: 5px;
+
+}
+#id_password1{
+	display: block;
+		margin-left: 10px;
+	border-radius: 10px;
+	border : solid 2px lightblue;
+	padding: 5px;
+
+}
+#id_password2{
+	display: block;
+		margin-left: 10px;
+	border-radius: 10px;
+	border : solid 2px lightblue;
+	padding: 5px;
+
+}
+#id_password{
+	display: block;
+		margin-left: 10px;
+	border-radius: 10px;
+	border : solid 2px lightblue;
+	padding: 5px;
+
+}
+.choice{
+	
+}
+
+.logo{
+	font-family: 'Pacifico', cursive;font-size:150px;color:white;
+}
+.subline{
+	font-family: 'Pacifico', cursive;font-size:50px;color:white;
+}
+
+
+.logo-page{
+	padding-top : 120px;
+	padding-bottom: 120px;
+}
+
+.info{
+	font-family: 'Righteous', cursive;
+}
+
+.connect{
+	font-size: 40px;
+	border-radius: 20%;
+	height: 200px;
+	width:  200px;
+}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+	{% block main %}
+
+		<form action="{% url 'user:forgotconfirm' %}" method="POST">
+			{%csrf_token%}
+			Email-Id:<br>
+			<input type="email" id='id_emailId' name="emailId"><br>
+			<input class="btn btn-primary" type="submit" name="">
+
+		</form>
+
+	{% endblock %}

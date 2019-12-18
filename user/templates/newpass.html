@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+	{% block main %}
+		
+		<form method="POST"action="{% url 'user:newpass' activate_pass user%}"> 
+			{% csrf_token %}
+			Password :<br>
+			<input type="password" id="id_password" name="password"><br>
+			Confirm Password :<br>
+			<input type="password" id="id_password" name=""><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	{% endblock %}

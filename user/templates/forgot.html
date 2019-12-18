@@ -1,0 +1,5 @@
+{% autoescape off %}
+Hi {{ user }},
+Please click on the link to confirm your registration,
+http://{{ domain }}{% url 'user:newpass' activate_pass=activate_pass user=user %}
+{% endautoescape %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+
+{% block main %}
+
+	<form action="{% url 'user:detail' %}" method="POST" enctype="multipart/form-data">
+		<a class="btn float-right" href="{% url 'user:logout' %}">LOGOUT</a>
+		{% csrf_token %}
+		{{form}}
+		<input class="btn btn-primary" type="Submit" name="">
+	</form>
+	<script type="text/javascript">
+		document.getElementById('id_usernameid').value = "{{user}}";
+		document.getElementById('id_usernameid').readOnly = true;
+
+	</script>
+
+{% endblock %}
